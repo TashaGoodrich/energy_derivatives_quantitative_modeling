@@ -15,25 +15,25 @@ tested.
 The first notebook simulates one possible asset-price trajectory over 252
 trading-day intervals using the stochastic differential equation
 
-\[
+$$
 dS_t = \mu S_t\,dt + \sigma S_t\,dW_t.
-\]
+$$
 
 The simulation combines deterministic log drift with volatility-scaled
 Brownian increments:
 
-\[
+$$
 R_i =
 \left(\mu-\frac{1}{2}\sigma^2\right)\Delta t
 +\sigma\sqrt{\Delta t}Z_i,
 \qquad Z_i\sim N(0,1).
-\]
+$$
 
 The cumulative log returns are converted into an asset-price path using
 
-\[
+$$
 S_t=S_0e^{R_t}.
-\]
+$$
 
 A fixed random seed is currently used to make the notebook reproducible.
 
